@@ -196,7 +196,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &9081706533897671748
@@ -230,14 +230,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e5e5db120a5794487e05f2505a7be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryScene: 
-  gameOverScene: 
-  _capacete: {fileID: 9081706533728290116}
-  _capacete1: {fileID: 21300000, guid: 3e9931ef111682d4da8d1222cfc0a85e, type: 3}
-  _capacete2: {fileID: 21300000, guid: 05d86bfb69108c147bc2578096ccd10b, type: 3}
-  _capacete3: {fileID: 21300000, guid: bb4713d2107486f438b14f298990dfe0, type: 3}
-  _capacete4: {fileID: 21300000, guid: d2315ea8e401d1a42ab3a89735cd293a, type: 3}
-  _MonstroMorto: {fileID: 21300000, guid: 1b88cdbfbf6e2b54a8dc560e8270619f, type: 3}
+  _victoryScene: VictoryScene
+  _gameOverScene: GameOver
+  _helmet: {fileID: 9081706533728290116}
+  _helmetSprite1: {fileID: 21300000, guid: 3e9931ef111682d4da8d1222cfc0a85e, type: 3}
+  _helmetSprite2: {fileID: 21300000, guid: 05d86bfb69108c147bc2578096ccd10b, type: 3}
+  _helmetSprite3: {fileID: 21300000, guid: bb4713d2107486f438b14f298990dfe0, type: 3}
+  _helmetSprite4: {fileID: 21300000, guid: d2315ea8e401d1a42ab3a89735cd293a, type: 3}
+  _deadSprite: {fileID: 21300000, guid: b7d2a0181cbbedf4a9219febc65ee799, type: 3}
+  _bossDeadSFX: {fileID: 0}
 --- !u!58 &711183503332297204
 CircleCollider2D:
   m_ObjectHideFlags: 0

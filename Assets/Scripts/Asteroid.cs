@@ -16,7 +16,6 @@ public class Asteroid : MonoBehaviour
 	private void Awake()
 	{
 		_rigidbody2D = GetComponent<Rigidbody2D>();
-		_hasLaunch = false;
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
