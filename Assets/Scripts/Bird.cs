@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class Bird : MonoBehaviour
 {
     public string gameOverScene;
+    public string scene;
     
     private bool _canTouch = true;
     private int _birdLife = 3;

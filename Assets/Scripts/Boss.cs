@@ -4,15 +4,19 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
+    public Image blackfade;
+    public Animator animFade;
+    
     private int _monsterLife = 3;
     public int _pointToAddBoss;
     [SerializeField]
     string _victoryScene;
-    [SerializeField]
-    string _gameOverScene;
+    //[SerializeField]
+    //string _gameOverScene;
     
     [SerializeField]
     GameObject _helmet;
@@ -32,7 +36,8 @@ public class Boss : MonoBehaviour
 
     IEnumerator WaitToVictory()
     {
-        yield return new WaitForSeconds(3);
+        animFade.SetBool("fade", true);
+        yield return new WaitUntil(() => blackfade.color.a == 1);
         SceneManager.LoadScene(_victoryScene);
     }
 
@@ -78,8 +83,14 @@ public class Boss : MonoBehaviour
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite4;
             GetComponent<SpriteRenderer>().sprite = _deadSprite;
             
-            StartCoroutine(WaitToVictory());
+            StartCoroutine(WaitSeconds());
         }
+    }
+
+    IEnumerator WaitSeconds()
+    {
+        yield return new WaitForSeconds(2);
+        StartCoroutine(WaitToVictory());
     }
 
 }
