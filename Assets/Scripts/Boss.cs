@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -32,7 +33,9 @@ public class Boss : MonoBehaviour
     [SerializeField]
     private Sprite _deadSprite;
     [SerializeField]
-    AudioSource _bossDeadSFX;
+    AudioClip _bossDeadSFX;
+    [SerializeField]
+    AudioClip _bossHitSFX;
 
     IEnumerator WaitToVictory()
     {
@@ -64,22 +67,24 @@ public class Boss : MonoBehaviour
         if (_monsterLife == 3)
         {
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite1;
+            AudioSource.PlayClipAtPoint(_bossHitSFX, Vector3.zero, Single.MaxValue);
         }
         if (_monsterLife == 2)
         {
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite2;
+            AudioSource.PlayClipAtPoint(_bossHitSFX, Vector3.zero, Single.MaxValue);
         }
         if (_monsterLife == 1)
         {
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite3;
-            
+            AudioSource.PlayClipAtPoint(_bossHitSFX, Vector3.zero, Single.MaxValue);
         }
 
         if (_monsterLife <= 0)
         {
             PointControl.points = PointControl.points + _pointToAddBoss;
             
-            _bossDeadSFX.Play();
+            AudioSource.PlayClipAtPoint(_bossDeadSFX, Vector3.zero, Single.MaxValue);
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite4;
             GetComponent<SpriteRenderer>().sprite = _deadSprite;
             

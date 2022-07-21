@@ -101,7 +101,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3e9931ef111682d4da8d1222cfc0a85e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -141,7 +141,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9081706533897671747}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.65, y: 0.56, z: 3.4978}
+  m_LocalPosition: {x: 1.07, y: -0.06, z: 3.4978}
   m_LocalScale: {x: 0.5689291, y: 0.5689291, z: 0.5689291}
   m_Children:
   - {fileID: 9081706533728290119}
@@ -187,16 +187,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7a007fd009d4f0a47ac2be181e68c9f1, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: c34c589c67274c548b5694cb164bd043, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 4, y: 7.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &9081706533897671748
@@ -230,15 +230,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e5e5db120a5794487e05f2505a7be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackfade: {fileID: 0}
+  animFade: {fileID: 0}
+  _pointToAddBoss: 1000
   _victoryScene: VictoryScene
-  _gameOverScene: GameOver
   _helmet: {fileID: 9081706533728290116}
   _helmetSprite1: {fileID: 21300000, guid: 3e9931ef111682d4da8d1222cfc0a85e, type: 3}
   _helmetSprite2: {fileID: 21300000, guid: 05d86bfb69108c147bc2578096ccd10b, type: 3}
   _helmetSprite3: {fileID: 21300000, guid: bb4713d2107486f438b14f298990dfe0, type: 3}
   _helmetSprite4: {fileID: 21300000, guid: d2315ea8e401d1a42ab3a89735cd293a, type: 3}
   _deadSprite: {fileID: 21300000, guid: b7d2a0181cbbedf4a9219febc65ee799, type: 3}
-  _bossDeadSFX: {fileID: 0}
+  _bossDeadSFX: {fileID: 8300000, guid: 3ad5032a76e4227409457d80ff232574, type: 3}
+  _bossHitSFX: {fileID: 8300000, guid: ec1d2c80b91705d4392150a46350848a, type: 3}
 --- !u!58 &711183503332297204
 CircleCollider2D:
   m_ObjectHideFlags: 0

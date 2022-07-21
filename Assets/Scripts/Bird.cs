@@ -35,7 +35,15 @@ public class Bird : MonoBehaviour
     protected Rigidbody2D _rigidbody2D;
     private SpriteRenderer _render;
     private Vector2 _startPosition;
-    
+
+    [SerializeField]
+    private AudioClip _launchSFX;
+    [SerializeField]
+    private AudioClip _holdSFX;
+    [SerializeField]
+    private AudioClip _dragSFX;
+
+    private bool _alreadyDragSFX = false;
 
     protected virtual void Awake()
     {
@@ -94,6 +102,7 @@ public class Bird : MonoBehaviour
         //Debug.Log("A vida do bird eh: "+ _birdLife);
         _particleTrail.Pause();
         yield return new WaitForSeconds(3);
+        _alreadyDragSFX = false;
         _render.color = Color.clear;
         _spriteHelmet.color = Color.clear;
         _canTouch = true;
@@ -120,6 +129,7 @@ public class Bird : MonoBehaviour
     private void OnMouseDown()
     {
         _render.color = Color.red;
+        AudioSource.PlayClipAtPoint(_holdSFX, Vector3.zero, Single.MaxValue);
         _guideLine.SetActive(true);
     }
 
@@ -132,6 +142,7 @@ public class Bird : MonoBehaviour
         _rigidbody2D.isKinematic = false;
         _rigidbody2D.AddForce(diretion * _force);
         
+        AudioSource.PlayClipAtPoint(_launchSFX, Vector3.zero, Single.MaxValue);
         _guideLine.SetActive(false);
         _particleTrail.Play();
         _render.color = Color.white;
@@ -157,6 +168,12 @@ public class Bird : MonoBehaviour
         _guideLine.transform.right = guideDirection;
         _guideLine.GetComponent<GuideLine>()
             .SetTotal(Vector2.Distance(desiredPosition, _startPosition));
+
+        if ((distance > _maxDragDistance/9) && !_alreadyDragSFX)
+        {
+            _alreadyDragSFX = true;
+            AudioSource.PlayClipAtPoint(_dragSFX, Vector3.zero, Single.MaxValue);
+        }
     }
 
 	private void OnBecameInvisible()
