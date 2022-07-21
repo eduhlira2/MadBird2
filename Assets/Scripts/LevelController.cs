@@ -9,10 +9,10 @@ public class LevelController : MonoBehaviour
     [SerializeField]
     private string _nextLevelName;
     
-    private Asteroid[] _monsters;
+    private Monster[] _monsters;
     private void OnEnable()
     {
-        _monsters = FindObjectsOfType<Asteroid>();
+        _monsters = FindObjectsOfType<Monster>();
     }
 
     private void Update()

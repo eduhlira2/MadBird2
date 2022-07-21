@@ -9,9 +9,9 @@ public class Bird : MonoBehaviour
 {
 
     [SerializeField]
-    private float _force;
+    private float _force = 1000;
     [SerializeField]
-    private float _maxDragDistance;
+    private float _maxDragDistance = 4.5f;
     [SerializeField]
     private GameObject _guideLine;
     [SerializeField]

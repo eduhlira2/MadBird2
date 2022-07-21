@@ -717,7 +717,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 395314820}
         m_TargetAssemblyTypeName: SceneControll, Assembly-CSharp
-        m_MethodName: restart
+        m_MethodName: Restart
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
