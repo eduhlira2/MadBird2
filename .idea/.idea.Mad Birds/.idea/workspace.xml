@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0667adb-4477-4e75-bac3-7cd0216acd39" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mad Birds/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mad Birds/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BGM Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BGM Level1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BGM Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BGM Level2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BGM Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BGM Level3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BGM Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BGM Level4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BossController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BossController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RedBird.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RedBird.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bird.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="a0667adb-4477-4e75-bac3-7cd0216acd39" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658283023502</updated>
       <workItem from="1658283050809" duration="1326000" />
-      <workItem from="1658439912209" duration="1936000" />
+      <workItem from="1658439912209" duration="2527000" />
     </task>
     <servers />
   </component>
