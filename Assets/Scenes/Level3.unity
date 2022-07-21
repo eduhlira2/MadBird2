@@ -215,7 +215,7 @@ SpriteRenderer:
   m_Size: {x: 103.08634, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &138236270
@@ -356,7 +356,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981393, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: orthographic size
-      value: 3.6203063
+      value: 3.7722654
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672468568162981393, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672468568162981393, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672468568162981393, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.25882354
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981614, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.x

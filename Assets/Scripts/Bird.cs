@@ -7,7 +7,17 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Bird : MonoBehaviour
 {
+    private bool _canTouch = true;
+    private int _birdLife = 3;
+    public GameObject[] _extrabirds;
+    public GameObject redBird;
+    [SerializeField]
+    private SpriteRenderer _spriteCapacete;
 
+    [SerializeField]
+    private Animator _Extrabird2;
+    [SerializeField]
+    private Animator _Extrabird3;
     [SerializeField]
     private float _force = 1000;
     [SerializeField]
@@ -25,29 +35,78 @@ public class Bird : MonoBehaviour
     protected virtual void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _spriteCapacete = _spriteCapacete.GetComponent<SpriteRenderer>();
         _render = GetComponent<SpriteRenderer>();
+        _Extrabird2 = _Extrabird2.GetComponent<Animator>();
+        _Extrabird3 = _Extrabird3.GetComponent<Animator>();
     }
 
     private void Start()
     {
-        _startPosition = _rigidbody2D.position;
+        Debug.Log("A vida do bird eh: "+ _birdLife);
+       _render.color = Color.clear;
+       _spriteCapacete.color = Color.clear;
+       _startPosition = _rigidbody2D.position;
         _rigidbody2D.isKinematic = true;
+        StartCoroutine(StartAnimBird());
+        
     }
 
     protected virtual void OnCollisionEnter2D(Collision2D col)
     {
+        if (_canTouch == true)
+        {
+            _birdLife = _birdLife - 1;
+            _canTouch = false;
+        }
+        
         StartCoroutine(ResetAfterDelay());
+        
     }
 
+    protected virtual IEnumerator StartAnimBird()
+    {
+        yield return new WaitForSeconds(2);
+        _render.color = Color.white;
+        _spriteCapacete.color = Color.white;
+        if (_birdLife == 3)
+        {
+            _extrabirds[0].SetActive(false); 
+        }
+        if (_birdLife == 2)
+        {
+            _Extrabird2.Play("Bird2ExtraLife");
+            _extrabirds[1].SetActive(false); 
+        }
+        if (_birdLife == 1)
+        {
+            _Extrabird3.Play("Bird3ExtraLife");
+            _extrabirds[2].SetActive(false); 
+        }
+        
+    }
     protected virtual IEnumerator ResetAfterDelay()
     {
+        Debug.Log("A vida do bird eh: "+ _birdLife);
         _particleTrail.Pause();
         yield return new WaitForSeconds(3);
-        
+        _render.color = Color.clear;
+        _spriteCapacete.color = Color.clear;
+        _canTouch = true;
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;
         _particleTrail.Clear();
+       
+        if (_birdLife == 2)
+        {
+            _Extrabird2.Play("Bird2ExtraLife");
+        }
+        if (_birdLife == 1)
+        {
+            _Extrabird3.Play("Bird3ExtraLife");
+        }
+        StartCoroutine(StartAnimBird());
     }
 
     private void OnMouseDown()
