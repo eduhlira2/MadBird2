@@ -10,6 +10,8 @@ public class Asteroid : MonoBehaviour
 	[SerializeField]
 	private float _forceLaunch = 500;
 
+	public int _pointsToAddAsteroid;
+		
 	private bool _hasLaunch = false;
 	private Rigidbody2D _rigidbody2D;
 
@@ -33,6 +35,7 @@ public class Asteroid : MonoBehaviour
 		var boss = collision.gameObject.GetComponent<Boss>();
 		if (boss)
 		{
+			PointControl.points = PointControl.points + _pointsToAddAsteroid;
 			StartCoroutine(Explosion());
 		}
 	}

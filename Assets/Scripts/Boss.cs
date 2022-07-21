@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 public class Boss : MonoBehaviour
 {
     private int _monsterLife = 3;
-    
+    public int _pointToAddBoss;
     [SerializeField]
     string _victoryScene;
     [SerializeField]
@@ -66,11 +66,14 @@ public class Boss : MonoBehaviour
         if (_monsterLife == 1)
         {
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite3;
-            _bossDeadSFX.Play();
+            
         }
 
         if (_monsterLife <= 0)
         {
+            PointControl.points = PointControl.points = _pointToAddBoss;
+            
+            _bossDeadSFX.Play();
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite4;
             GetComponent<SpriteRenderer>().sprite = _deadSprite;
             

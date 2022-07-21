@@ -12,7 +12,7 @@ public class Bird : MonoBehaviour
     public GameObject[] _extrabirds;
     public GameObject redBird;
     [SerializeField]
-    private SpriteRenderer _spriteCapacete;
+    private SpriteRenderer _spriteHelmet;
 
     [SerializeField]
     private Animator _Extrabird2;
@@ -35,7 +35,7 @@ public class Bird : MonoBehaviour
     protected virtual void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _spriteCapacete = _spriteCapacete.GetComponent<SpriteRenderer>();
+        _spriteHelmet = _spriteHelmet.GetComponent<SpriteRenderer>();
         _render = GetComponent<SpriteRenderer>();
         _Extrabird2 = _Extrabird2.GetComponent<Animator>();
         _Extrabird3 = _Extrabird3.GetComponent<Animator>();
@@ -43,9 +43,9 @@ public class Bird : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("A vida do bird eh: "+ _birdLife);
+        //Debug.Log("A vida do bird eh: "+ _birdLife);
        _render.color = Color.clear;
-       _spriteCapacete.color = Color.clear;
+       _spriteHelmet.color = Color.clear;
        _startPosition = _rigidbody2D.position;
         _rigidbody2D.isKinematic = true;
         StartCoroutine(StartAnimBird());
@@ -68,7 +68,7 @@ public class Bird : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         _render.color = Color.white;
-        _spriteCapacete.color = Color.white;
+        _spriteHelmet.color = Color.white;
         if (_birdLife == 3)
         {
             _extrabirds[0].SetActive(false); 
@@ -87,11 +87,11 @@ public class Bird : MonoBehaviour
     }
     protected virtual IEnumerator ResetAfterDelay()
     {
-        Debug.Log("A vida do bird eh: "+ _birdLife);
+        //Debug.Log("A vida do bird eh: "+ _birdLife);
         _particleTrail.Pause();
         yield return new WaitForSeconds(3);
         _render.color = Color.clear;
-        _spriteCapacete.color = Color.clear;
+        _spriteHelmet.color = Color.clear;
         _canTouch = true;
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;

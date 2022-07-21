@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8125911077122694386}
   - component: {fileID: 8125911077122694385}
   - component: {fileID: 8125911077122694384}
+  - component: {fileID: 1081988406824772712}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -145,8 +146,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6113aafc0daa876438b91eb15867f9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointsToAddMonster: 0
+  _pointsToAddCrate: 0
   _sprite: {fileID: 21300000, guid: 70a60dad9c6f2aa42941b53edf1428e9, type: 3}
   _particleSystem: {fileID: 8125911077505605269}
+--- !u!95 &1081988406824772712
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8125911077122694351}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18f49a8ac3cf8ca44a807e669ada0ab3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8125911077505605268
 GameObject:
   m_ObjectHideFlags: 0
@@ -4982,7 +5004,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1509131117
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
