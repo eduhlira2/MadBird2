@@ -413,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981393, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: orthographic size
-      value: 5.93875
+      value: 5.3875
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981393, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -429,35 +429,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981614, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3249998
+      value: -3.1999998
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981614, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7689998
+      value: 1.5779998
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981614, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.559999
+      value: -14.309999
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568375913414, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3249998
+      value: -3.1999998
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568375913414, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7689998
+      value: 1.5779998
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568375913414, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.559999
+      value: -14.309999
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568447077082, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.174759
+      value: -3.4200678
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568447077082, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1064243
+      value: 2.05185
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568447077085, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_Targets.Array.size
@@ -465,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568447077085, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_Targets.Array.data[0].radius
-      value: 4.56
+      value: 4.31
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568447077085, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_Targets.Array.data[0].target
@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 800229083}
     - target: {fileID: 8672468568447077085, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_Targets.Array.data[1].radius
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568447077085, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_Targets.Array.data[1].target
@@ -485,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568447077085, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_Targets.Array.data[2].radius
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568447077085, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_Targets.Array.data[2].target
@@ -1399,9 +1399,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1845249149}
     - target: {fileID: 4565263230754345791, guid: 7a1f6c8f1a5c57e42a516acf34d83359, type: 3}
+      propertyPath: victoryScene
+      value: VictoryScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565263230754345791, guid: 7a1f6c8f1a5c57e42a516acf34d83359, type: 3}
       propertyPath: _spriteHelmet
       value: 
       objectReference: {fileID: 1577746939}
+    - target: {fileID: 4565263230754345791, guid: 7a1f6c8f1a5c57e42a516acf34d83359, type: 3}
+      propertyPath: gameOverScene
+      value: GameOver
+      objectReference: {fileID: 0}
     - target: {fileID: 4565263230754345791, guid: 7a1f6c8f1a5c57e42a516acf34d83359, type: 3}
       propertyPath: _extrabirds.Array.size
       value: 3

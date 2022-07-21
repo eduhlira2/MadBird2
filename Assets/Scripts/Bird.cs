@@ -2,11 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class Bird : MonoBehaviour
 {
+    public string gameOverScene;
+    
     private bool _canTouch = true;
     private int _birdLife = 3;
     public GameObject[] _extrabirds;
@@ -83,7 +86,6 @@ public class Bird : MonoBehaviour
             _Extrabird3.Play("Bird3ExtraLife");
             _extrabirds[2].SetActive(false); 
         }
-        
     }
     protected virtual IEnumerator ResetAfterDelay()
     {
@@ -105,6 +107,10 @@ public class Bird : MonoBehaviour
         if (_birdLife == 1)
         {
             _Extrabird3.Play("Bird3ExtraLife");
+        }
+        if (_birdLife == 0)
+        {
+            SceneManager.LoadScene(gameOverScene);
         }
         StartCoroutine(StartAnimBird());
     }

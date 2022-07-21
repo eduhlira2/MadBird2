@@ -919,6 +919,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1488011021}
     - target: {fileID: 4921830372311877721, guid: f5fa95ebc3b5e5c43b8065993cd387ff, type: 3}
+      propertyPath: gameOverScene
+      value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921830372311877721, guid: f5fa95ebc3b5e5c43b8065993cd387ff, type: 3}
       propertyPath: _spriteCapacete
       value: 
       objectReference: {fileID: 1488011021}

@@ -1264,7 +1264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981614, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4199996
+      value: 2.4199994
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981614, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1276,7 +1276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568375913414, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4199996
+      value: 2.4199994
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568375913414, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3011,9 +3011,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 948174671}
     - target: {fileID: 8317149433213592373, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
+      propertyPath: victoryScene
+      value: VictoryScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317149433213592373, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
       propertyPath: _spriteHelmet
       value: 
       objectReference: {fileID: 462635611}
+    - target: {fileID: 8317149433213592373, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
+      propertyPath: gameOverScene
+      value: GameOver
+      objectReference: {fileID: 0}
     - target: {fileID: 8317149433213592373, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
       propertyPath: _extrabirds.Array.size
       value: 1

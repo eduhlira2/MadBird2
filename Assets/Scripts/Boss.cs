@@ -49,7 +49,8 @@ public class Boss : MonoBehaviour
 
         if (bird)
         {
-            SceneManager.LoadScene(_gameOverScene);
+            
+            //SceneManager.LoadScene(_gameOverScene);
         }
     }
 
