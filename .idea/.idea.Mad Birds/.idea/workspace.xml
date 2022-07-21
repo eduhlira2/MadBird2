@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0667adb-4477-4e75-bac3-7cd0216acd39" name="Changes" comment="" />
+    <list default="true" id="a0667adb-4477-4e75-bac3-7cd0216acd39" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mad Birds/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mad Birds/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Credits.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Credits.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GreenBird.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GreenBird.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Restart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Restart.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CreditScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CreditScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VictoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VictoryScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GreenBird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GreenBird.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658283023502</updated>
       <workItem from="1658283050809" duration="1326000" />
-      <workItem from="1658439912209" duration="2527000" />
+      <workItem from="1658439912209" duration="3655000" />
     </task>
     <servers />
   </component>
