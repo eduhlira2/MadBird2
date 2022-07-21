@@ -77,7 +77,7 @@ public class Boss : MonoBehaviour
 
         if (_monsterLife <= 0)
         {
-            PointControl.points = PointControl.points = _pointToAddBoss;
+            PointControl.points = PointControl.points + _pointToAddBoss;
             
             _bossDeadSFX.Play();
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite4;
