@@ -150,6 +150,8 @@ MonoBehaviour:
   _pointsToAddCrate: 0
   _sprite: {fileID: 21300000, guid: 70a60dad9c6f2aa42941b53edf1428e9, type: 3}
   _particleSystem: {fileID: 8125911077505605269}
+  _hitSFX: {fileID: 8300000, guid: 29748a5af51d79c40a5ca8a40f83f92e, type: 3}
+  _deathSFX: {fileID: 8300000, guid: b29e9502a113aa548915968fb2087128, type: 3}
 --- !u!95 &1081988406824772712
 Animator:
   serializedVersion: 3

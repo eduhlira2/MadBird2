@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Rigidbody2D))]
 [SelectionBase]
 public class Monster : MonoBehaviour
 {
@@ -16,26 +17,33 @@ public class Monster : MonoBehaviour
     [SerializeField]
     private ParticleSystem _particleSystem;
 
+    [SerializeField]
+    private AudioClip _hitSFX;
+    
+    [SerializeField]
+    private AudioClip _deathSFX;
+
+    private Rigidbody2D _rigidbody2D;
+
     private bool _hasDied;
 
     private void Awake()
     {
         
         _hasDied = false;
-        
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
-    {
-        
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (ShouldDieFromCollision(col))
         {
             StartCoroutine(Die());
+        }
+        else if(_rigidbody2D.velocity.magnitude > 1f)
+        {
+            AudioSource.PlayClipAtPoint(_hitSFX, Vector3.zero, Single.MaxValue);
         }
             
     }
@@ -45,6 +53,7 @@ public class Monster : MonoBehaviour
         _hasDied = true;
         GetComponent<SpriteRenderer>().sprite = _sprite;
         _particleSystem.Play();
+        AudioSource.PlayClipAtPoint(_deathSFX, Vector3.zero, Single.MaxValue);
         
         yield return new WaitForSeconds(1);
         gameObject.SetActive(false);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,12 @@ public class Asteroid : MonoBehaviour
 		
 	private bool _hasLaunch = false;
 	private Rigidbody2D _rigidbody2D;
+	
+	[SerializeField]
+	private AudioClip _hitSFX;
+	
+	[SerializeField]
+	private AudioClip _explosionSFX;
 
 	private void Awake()
 	{
@@ -30,6 +37,7 @@ public class Asteroid : MonoBehaviour
 			var direction = collision.contacts[0].normal;
 			direction.y *= -1;
 			_rigidbody2D.AddForce(direction * _forceLaunch);
+			AudioSource.PlayClipAtPoint(_hitSFX, Vector3.zero, Single.MaxValue);
 		}
 
 		var boss = collision.gameObject.GetComponent<Boss>();
@@ -43,6 +51,7 @@ public class Asteroid : MonoBehaviour
 	IEnumerator Explosion()
 	{
 		_rigidbody2D.velocity = Vector2.zero;
+		AudioSource.PlayClipAtPoint(_explosionSFX, Vector3.zero, Single.MaxValue);
 
 		var animator = GetComponent<Animator>();
 		animator.SetBool("HasCollided", true);
