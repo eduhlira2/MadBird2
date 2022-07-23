@@ -16,6 +16,9 @@ public class GreenBird : Bird
     
     private bool _alreadyExploded;
 
+    [SerializeField]
+    private AudioClip _explosionSFX;
+
     protected override void Awake()
     {
         base.Awake();
@@ -44,6 +47,7 @@ public class GreenBird : Bird
     {
         _particleSystem.Play();
         _collider2D.radius *= _forceOfExplosion;
+        AudioSource.PlayClipAtPoint(_explosionSFX, Vector3.zero, Single.MaxValue);
         yield return new WaitForSeconds(0.3f);
         _collider2D.radius /= _forceOfExplosion;
     }

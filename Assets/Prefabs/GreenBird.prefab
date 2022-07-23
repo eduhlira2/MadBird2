@@ -157,12 +157,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1600ab2a599cf4585de730ed974e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverScene: 
+  scene: 
+  _extrabirds: []
+  redBird: {fileID: 0}
+  _spriteHelmet: {fileID: 0}
+  _Extrabird2: {fileID: 0}
+  _Extrabird3: {fileID: 0}
   _force: 5000
   _maxDragDistance: 4.5
   _guideLine: {fileID: 2875780430792991664}
   _particleTrail: {fileID: 8789864539306897801}
+  _launchSFX: {fileID: 8300000, guid: 10f7cfff64a55394b86a78b5b7dfc016, type: 3}
+  _holdSFX: {fileID: 8300000, guid: 4807875d8a139304c8afbadb0beefd79, type: 3}
+  _dragSFX: {fileID: 8300000, guid: 2f410c5436433fc478d922c7b2582e3d, type: 3}
   _particleSystem: {fileID: 9115783530188858923}
   _forceOfExplosion: 10
+  _explosionSFX: {fileID: 8300000, guid: ec1d2c80b91705d4392150a46350848a, type: 3}
 --- !u!1 &4892890928483573638
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,12 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class Bird : MonoBehaviour
 {
+    public string gameOverScene;
+    public string scene;
+    
+    private bool _canTouch = true;
+    private int _birdLife = 3;
+    public GameObject[] _extrabirds;
+    public GameObject redBird;
+    [SerializeField]
+    private SpriteRenderer _spriteHelmet;
 
+    [SerializeField]
+    private Animator _Extrabird2;
+    [SerializeField]
+    private Animator _Extrabird3;
     [SerializeField]
     private float _force = 1000;
     [SerializeField]
@@ -20,39 +35,101 @@ public class Bird : MonoBehaviour
     protected Rigidbody2D _rigidbody2D;
     private SpriteRenderer _render;
     private Vector2 _startPosition;
-    
+
+    [SerializeField]
+    private AudioClip _launchSFX;
+    [SerializeField]
+    private AudioClip _holdSFX;
+    [SerializeField]
+    private AudioClip _dragSFX;
+
+    private bool _alreadyDragSFX = false;
 
     protected virtual void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _spriteHelmet = _spriteHelmet.GetComponent<SpriteRenderer>();
         _render = GetComponent<SpriteRenderer>();
+        _Extrabird2 = _Extrabird2.GetComponent<Animator>();
+        _Extrabird3 = _Extrabird3.GetComponent<Animator>();
     }
 
     private void Start()
     {
-        _startPosition = _rigidbody2D.position;
+        //Debug.Log("A vida do bird eh: "+ _birdLife);
+       _render.color = Color.clear;
+       _spriteHelmet.color = Color.clear;
+       _startPosition = _rigidbody2D.position;
         _rigidbody2D.isKinematic = true;
+        StartCoroutine(StartAnimBird());
+        
     }
 
     protected virtual void OnCollisionEnter2D(Collision2D col)
     {
+        if (_canTouch == true)
+        {
+            _birdLife = _birdLife - 1;
+            _canTouch = false;
+        }
+        
         StartCoroutine(ResetAfterDelay());
+        
     }
 
+    protected virtual IEnumerator StartAnimBird()
+    {
+        yield return new WaitForSeconds(2);
+        _render.color = Color.white;
+        _spriteHelmet.color = Color.white;
+        if (_birdLife == 3)
+        {
+            _extrabirds[0].SetActive(false); 
+        }
+        if (_birdLife == 2)
+        {
+            _Extrabird2.Play("Bird2ExtraLife");
+            _extrabirds[1].SetActive(false); 
+        }
+        if (_birdLife == 1)
+        {
+            _Extrabird3.Play("Bird3ExtraLife");
+            _extrabirds[2].SetActive(false); 
+        }
+    }
     protected virtual IEnumerator ResetAfterDelay()
     {
+        //Debug.Log("A vida do bird eh: "+ _birdLife);
         _particleTrail.Pause();
         yield return new WaitForSeconds(3);
-        
+        _alreadyDragSFX = false;
+        _render.color = Color.clear;
+        _spriteHelmet.color = Color.clear;
+        _canTouch = true;
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;
         _particleTrail.Clear();
+       
+        if (_birdLife == 2)
+        {
+            _Extrabird2.Play("Bird2ExtraLife");
+        }
+        if (_birdLife == 1)
+        {
+            _Extrabird3.Play("Bird3ExtraLife");
+        }
+        if (_birdLife == 0)
+        {
+            SceneManager.LoadScene(gameOverScene);
+        }
+        StartCoroutine(StartAnimBird());
     }
 
     private void OnMouseDown()
     {
         _render.color = Color.red;
+        AudioSource.PlayClipAtPoint(_holdSFX, Vector3.zero, Single.MaxValue);
         _guideLine.SetActive(true);
     }
 
@@ -65,6 +142,7 @@ public class Bird : MonoBehaviour
         _rigidbody2D.isKinematic = false;
         _rigidbody2D.AddForce(diretion * _force);
         
+        AudioSource.PlayClipAtPoint(_launchSFX, Vector3.zero, Single.MaxValue);
         _guideLine.SetActive(false);
         _particleTrail.Play();
         _render.color = Color.white;
@@ -90,6 +168,12 @@ public class Bird : MonoBehaviour
         _guideLine.transform.right = guideDirection;
         _guideLine.GetComponent<GuideLine>()
             .SetTotal(Vector2.Distance(desiredPosition, _startPosition));
+
+        if ((distance > _maxDragDistance/9) && !_alreadyDragSFX)
+        {
+            _alreadyDragSFX = true;
+            AudioSource.PlayClipAtPoint(_dragSFX, Vector3.zero, Single.MaxValue);
+        }
     }
 
 	private void OnBecameInvisible()

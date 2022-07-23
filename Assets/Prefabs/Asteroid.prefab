@@ -155,3 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _forceLaunch: 500
+  _pointsToAddAsteroid: 0
+  _hitSFX: {fileID: 8300000, guid: f876fdddd2398bf4dbb59a8334da0ce6, type: 3}
+  _explosionSFX: {fileID: 8300000, guid: 45bc9e66e4d458c49aaef57931bcb317, type: 3}

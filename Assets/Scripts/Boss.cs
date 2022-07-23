@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    private int _monsterLife = 3;
+    public Image blackfade;
+    public Animator animFade;
     
+    private int _monsterLife = 3;
+    public int _pointToAddBoss;
     [SerializeField]
     string _victoryScene;
-    [SerializeField]
-    string _gameOverScene;
+    //[SerializeField]
+    //string _gameOverScene;
     
     [SerializeField]
     GameObject _helmet;
@@ -28,11 +33,14 @@ public class Boss : MonoBehaviour
     [SerializeField]
     private Sprite _deadSprite;
     [SerializeField]
-    AudioSource _bossDeadSFX;
+    AudioClip _bossDeadSFX;
+    [SerializeField]
+    AudioClip _bossHitSFX;
 
     IEnumerator WaitToVictory()
     {
-        yield return new WaitForSeconds(3);
+        animFade.SetBool("fade", true);
+        yield return new WaitUntil(() => blackfade.color.a == 1);
         SceneManager.LoadScene(_victoryScene);
     }
 
@@ -49,7 +57,8 @@ public class Boss : MonoBehaviour
 
         if (bird)
         {
-            SceneManager.LoadScene(_gameOverScene);
+            
+            //SceneManager.LoadScene(_gameOverScene);
         }
     }
 
@@ -58,24 +67,35 @@ public class Boss : MonoBehaviour
         if (_monsterLife == 3)
         {
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite1;
+            AudioSource.PlayClipAtPoint(_bossHitSFX, Vector3.zero, Single.MaxValue);
         }
         if (_monsterLife == 2)
         {
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite2;
+            AudioSource.PlayClipAtPoint(_bossHitSFX, Vector3.zero, Single.MaxValue);
         }
         if (_monsterLife == 1)
         {
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite3;
-            _bossDeadSFX.Play();
+            AudioSource.PlayClipAtPoint(_bossHitSFX, Vector3.zero, Single.MaxValue);
         }
 
         if (_monsterLife <= 0)
         {
+            PointControl.points = PointControl.points + _pointToAddBoss;
+            
+            AudioSource.PlayClipAtPoint(_bossDeadSFX, Vector3.zero, Single.MaxValue);
             _helmet.GetComponent<SpriteRenderer>().sprite = _helmetSprite4;
             GetComponent<SpriteRenderer>().sprite = _deadSprite;
             
-            StartCoroutine(WaitToVictory());
+            StartCoroutine(WaitSeconds());
         }
+    }
+
+    IEnumerator WaitSeconds()
+    {
+        yield return new WaitForSeconds(2);
+        StartCoroutine(WaitToVictory());
     }
 
 }
