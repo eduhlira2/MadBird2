@@ -1349,7 +1349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981393, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: orthographic size
-      value: 5.1398435
+      value: 5.139843
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981393, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -1365,7 +1365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981614, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4199998
+      value: 2.4199994
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568162981614, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1377,7 +1377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568375913414, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4199998
+      value: 2.4199994
       objectReference: {fileID: 0}
     - target: {fileID: 8672468568375913414, guid: e2570947edd2a27408f7735bcda278f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1929,7 +1929,7 @@ PrefabInstance:
       objectReference: {fileID: 1936733454}
     - target: {fileID: 3966434370810902025, guid: f93a9160e967f2245966a98d1679eeb1, type: 3}
       propertyPath: _nextLevelName
-      value: Level4
+      value: CutScene
       objectReference: {fileID: 0}
     - target: {fileID: 3966434370810902038, guid: f93a9160e967f2245966a98d1679eeb1, type: 3}
       propertyPath: m_Name
