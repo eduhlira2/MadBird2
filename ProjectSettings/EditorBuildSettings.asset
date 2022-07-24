@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: cfad1d3032aa0c74cbeacca15a2d7c60
+  - enabled: 1
+    path: Assets/Scenes/CreditScene.unity
+    guid: be3425d6fe0ede9478dfb603e4ca6015
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2d09d1d378ece8a4bb3f4561d679fbef
   - enabled: 1
@@ -15,18 +21,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3.unity
     guid: 7df1eea6f53dd664988b5a4912f7ec58
   - enabled: 1
+    path: Assets/Scenes/CutScene.unity
+    guid: 8905220161ca5bb43918de03b5144263
+  - enabled: 1
     path: Assets/Scenes/Level4.unity
     guid: 470dcdfcb73efb345af3f749087fc03a
-  - enabled: 1
-    path: Assets/Scenes/VictoryScene.unity
-    guid: 24b6622e19ad565449dcb3e283d3a2cc
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 300562f892e66b244b7a80b931179887
   - enabled: 1
-    path: Assets/Scenes/CreditScene.unity
-    guid: be3425d6fe0ede9478dfb603e4ca6015
-  - enabled: 1
-    path: Assets/Scenes/StartScene.unity
-    guid: cfad1d3032aa0c74cbeacca15a2d7c60
+    path: Assets/Scenes/VictoryScene.unity
+    guid: 24b6622e19ad565449dcb3e283d3a2cc
   m_configObjects: {}

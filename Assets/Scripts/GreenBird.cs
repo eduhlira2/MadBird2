@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CircleCollider2D))]
 public class GreenBird : Bird
@@ -28,8 +29,8 @@ public class GreenBird : Bird
 
     protected override IEnumerator ResetAfterDelay()
     {
-        yield return base.ResetAfterDelay();
-        _alreadyExploded = false;
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("CutScene");
     }
 
     protected override void OnCollisionEnter2D(Collision2D col)
