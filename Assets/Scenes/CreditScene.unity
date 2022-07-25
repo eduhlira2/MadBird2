@@ -1136,6 +1136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGM Credits
       objectReference: {fileID: 0}
+    - target: {fileID: 6185248651305449801, guid: c89185b261e91514eb03a1194f1657ba, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6185248651305449802, guid: c89185b261e91514eb03a1194f1657ba, type: 3}
       propertyPath: m_RootOrder
       value: 3

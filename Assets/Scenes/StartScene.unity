@@ -1422,6 +1422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGM Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 6185248651305449801, guid: d1c1b7cedfab8e44ab96f374419e1e2c, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6185248651305449802, guid: d1c1b7cedfab8e44ab96f374419e1e2c, type: 3}
       propertyPath: m_RootOrder
       value: 3
