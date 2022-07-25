@@ -864,8 +864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa69cf0a8e586643832bef9921133cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackfade: {fileID: 0}
-  animFade: {fileID: 0}
+  blackfade: {fileID: 1142706698}
+  animFade: {fileID: 1142706696}
 --- !u!1 &1086378000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,11 +1053,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 265.36
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 218.7
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1089,11 +1089,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -3.4000244
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 7.289978
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1109,6 +1109,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036006, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996987463628036006, guid: 9a70127a3534534468ce5527322c2479, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036011, guid: 9a70127a3534534468ce5527322c2479, type: 3}

@@ -188,6 +188,63 @@ PrefabInstance:
       objectReference: {fileID: 1190667327}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f640a0ca353597458540795a0c62aee, type: 3}
+--- !u!1001 &71148244
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 547427187}
+    m_Modifications:
+    - target: {fileID: 621089551636595698, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_Name
+      value: PenasRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621089551636595701, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
 --- !u!1001 &109438118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -665,11 +722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 362.3301
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 355.3622
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_LocalPosition.x
@@ -701,11 +758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 55.74292
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -45.29132
       objectReference: {fileID: 0}
     - target: {fileID: 2996987463628036004, guid: 9a70127a3534534468ce5527322c2479, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -902,6 +959,10 @@ PrefabInstance:
       propertyPath: gameOverScene
       value: GameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 4921830372311877721, guid: f5fa95ebc3b5e5c43b8065993cd387ff, type: 3}
+      propertyPath: _particFeather
+      value: 
+      objectReference: {fileID: 2096484023}
     - target: {fileID: 4921830372311877721, guid: f5fa95ebc3b5e5c43b8065993cd387ff, type: 3}
       propertyPath: _spriteCapacete
       value: 
@@ -2167,6 +2228,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8035477797690614723, guid: d463bb769253e77469e803be58a8248c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d463bb769253e77469e803be58a8248c, type: 3}
+--- !u!198 &2096484023 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 621089551636595703, guid: f28dface1bd080347a8b67be8db8923d, type: 3}
+  m_PrefabInstance: {fileID: 71148244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6162797861803837125
 PrefabInstance:
   m_ObjectHideFlags: 0

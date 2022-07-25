@@ -13,6 +13,8 @@ public class Bird : MonoBehaviour
     public string scene;
     
     private bool _canTouch = true;
+    public static bool _canLaunch = true;
+    
     private int _birdLife = 3;
     public GameObject[] _extrabirds;
     public GameObject redBird;
@@ -32,6 +34,9 @@ public class Bird : MonoBehaviour
     [SerializeField]
     private ParticleSystem _particleTrail;
     
+    [SerializeField]
+    private ParticleSystem _particFeather;
+    
     protected Rigidbody2D _rigidbody2D;
     private SpriteRenderer _render;
     private Vector2 _startPosition;
@@ -47,6 +52,7 @@ public class Bird : MonoBehaviour
 
     protected virtual void Awake()
     {
+        _canLaunch = true;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _spriteHelmet = _spriteHelmet.GetComponent<SpriteRenderer>();
         _render = GetComponent<SpriteRenderer>();
@@ -67,6 +73,7 @@ public class Bird : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D col)
     {
+        _particFeather.Play();
         if (_canTouch == true)
         {
             _birdLife = _birdLife - 1;
@@ -128,9 +135,13 @@ public class Bird : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _render.color = Color.red;
-        AudioSource.PlayClipAtPoint(_holdSFX, Vector3.zero, Single.MaxValue);
-        _guideLine.SetActive(true);
+        if (_canLaunch == true)
+        {
+            _render.color = Color.red;
+            AudioSource.PlayClipAtPoint(_holdSFX, Vector3.zero, Single.MaxValue);
+            _guideLine.SetActive(true);
+        }
+        
     }
 
     private void OnMouseUp()
@@ -150,29 +161,33 @@ public class Bird : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        var desiredPosition = (mousePosition.x > _startPosition.x) ? new Vector2(_startPosition.x, mousePosition.y) : mousePosition;
-
-        var distance = Vector2.Distance(desiredPosition, _startPosition);
-        if (distance > _maxDragDistance)
+        if (_canLaunch == true)
         {
-            var direction = desiredPosition - _startPosition;
-            direction.Normalize();
-            desiredPosition = _startPosition + (direction * _maxDragDistance);
-        }
-        _rigidbody2D.position = desiredPosition;
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        var guideDirection = _startPosition - desiredPosition;
-        guideDirection.Normalize();
-        _guideLine.transform.right = guideDirection;
-        _guideLine.GetComponent<GuideLine>()
-            .SetTotal(Vector2.Distance(desiredPosition, _startPosition));
+            var desiredPosition = (mousePosition.x > _startPosition.x) ? new Vector2(_startPosition.x, mousePosition.y) : mousePosition;
 
-        if ((distance > _maxDragDistance/9) && !_alreadyDragSFX)
-        {
-            _alreadyDragSFX = true;
-            AudioSource.PlayClipAtPoint(_dragSFX, Vector3.zero, Single.MaxValue);
+            var distance = Vector2.Distance(desiredPosition, _startPosition);
+            if (distance > _maxDragDistance)
+            {
+                var direction = desiredPosition - _startPosition;
+                direction.Normalize();
+                desiredPosition = _startPosition + (direction * _maxDragDistance);
+            }
+            _rigidbody2D.position = desiredPosition;
+
+            var guideDirection = _startPosition - desiredPosition;
+            guideDirection.Normalize();
+            _guideLine.transform.right = guideDirection;
+            _guideLine.GetComponent<GuideLine>()
+                .SetTotal(Vector2.Distance(desiredPosition, _startPosition));
+
+            if ((distance > _maxDragDistance/9) && !_alreadyDragSFX)
+            {
+                _alreadyDragSFX = true;
+                AudioSource.PlayClipAtPoint(_dragSFX, Vector3.zero, Single.MaxValue);
+            }
+    
         }
     }
 

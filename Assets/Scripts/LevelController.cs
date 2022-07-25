@@ -29,14 +29,17 @@ public class LevelController : MonoBehaviour
     {
         if (MonstersAreAllDead())
         {
+            Bird._canLaunch = false;
             StartCoroutine(GoToNextLevel());
         }
     }
 
     IEnumerator GoToNextLevel()
     {
+        
+        //yield return new WaitUntil(() => blackfade.color.a == 1);
+        yield return new WaitForSeconds(3);
         animFade.SetBool("fade", true);
-        yield return new WaitUntil(() => blackfade.color.a == 1);
         SceneManager.LoadScene(_nextLevelName);
     }
 

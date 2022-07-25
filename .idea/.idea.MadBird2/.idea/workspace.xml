@@ -8,7 +8,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SetNewPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Highscore.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -74,6 +73,7 @@
       <workItem from="1658423350038" duration="1331000" />
       <workItem from="1658429221938" duration="3920000" />
       <workItem from="1658434572176" duration="1845000" />
+      <workItem from="1658770475017" duration="1840000" />
     </task>
     <servers />
   </component>

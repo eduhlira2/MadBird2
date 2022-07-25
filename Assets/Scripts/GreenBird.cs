@@ -11,6 +11,9 @@ public class GreenBird : Bird
     private ParticleSystem _particleSystem;
     
     [SerializeField]
+    private ParticleSystem _featherGreen;
+    
+    [SerializeField]
     private float _forceOfExplosion;
 
     private CircleCollider2D _collider2D;
@@ -36,7 +39,7 @@ public class GreenBird : Bird
     protected override void OnCollisionEnter2D(Collision2D col)
     {
         base.OnCollisionEnter2D(col);
-
+        _featherGreen.Play();
         if (_alreadyExploded)
             return;
         
