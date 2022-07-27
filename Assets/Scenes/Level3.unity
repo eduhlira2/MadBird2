@@ -3388,9 +3388,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenBird
       objectReference: {fileID: 0}
-    - target: {fileID: 8317149433213592373, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
-      propertyPath: _force
-      value: 5000
+    - target: {fileID: 6870912203776018898, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8317149433213592373, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
       propertyPath: redBird
@@ -3420,14 +3420,6 @@ PrefabInstance:
       propertyPath: _particFeather
       value: 
       objectReference: {fileID: 779755015}
-    - target: {fileID: 8317149433213592373, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
-      propertyPath: _maxDragDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8317149433213592373, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
-      propertyPath: _forceOfExplosion
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8317149433213592373, guid: d59d34451556cfe469d7947afa06b8a9, type: 3}
       propertyPath: _extrabirds.Array.size
       value: 1

@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a0667adb-4477-4e75-bac3-7cd0216acd39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mad Birds/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mad Birds/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GreenBird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GreenBird.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GreenBird.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GreenBird.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Documents/GitHub/FlappyBird/Assets/Scripts/Parallax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Autoskip.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crate.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -77,6 +76,7 @@
       <workItem from="1658439912209" duration="3655000" />
       <workItem from="1658534349010" duration="1386000" />
       <workItem from="1658666853558" duration="1323000" />
+      <workItem from="1658883793348" duration="1123000" />
     </task>
     <servers />
   </component>
