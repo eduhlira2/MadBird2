@@ -20,6 +20,7 @@ public class PointControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerPrefs.SetInt("actualScore", points);
         pointText.text = points.ToString();
         
         if (points > PlayerPrefs.GetInt("highScore"))
