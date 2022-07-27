@@ -78,15 +78,15 @@ public class Bird : MonoBehaviour
         {
             _birdLife = _birdLife - 1;
             _canTouch = false;
+            
+            StartCoroutine(ResetAfterDelay());
         }
-        
-        StartCoroutine(ResetAfterDelay());
-        
     }
 
     protected virtual IEnumerator StartAnimBird()
     {
         yield return new WaitForSeconds(2);
+        _canTouch = true;
         _render.color = Color.white;
         _spriteHelmet.color = Color.white;
         if (_birdLife == 3)
@@ -95,12 +95,10 @@ public class Bird : MonoBehaviour
         }
         if (_birdLife == 2)
         {
-            _Extrabird2.Play("Bird2ExtraLife");
             _extrabirds[1].SetActive(false); 
         }
         if (_birdLife == 1)
         {
-            _Extrabird3.Play("Bird3ExtraLife");
             _extrabirds[2].SetActive(false); 
         }
     }
@@ -112,7 +110,6 @@ public class Bird : MonoBehaviour
         _alreadyDragSFX = false;
         _render.color = Color.clear;
         _spriteHelmet.color = Color.clear;
-        _canTouch = true;
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;
@@ -128,6 +125,7 @@ public class Bird : MonoBehaviour
         }
         if (_birdLife == 0)
         {
+            yield return new WaitForSeconds(2);
             SceneManager.LoadScene(gameOverScene);
         }
         StartCoroutine(StartAnimBird());
@@ -137,6 +135,19 @@ public class Bird : MonoBehaviour
     {
         if (_canLaunch == true)
         {
+            if (_birdLife == 3)
+            {
+                _extrabirds[0].SetActive(false); 
+            }
+            if (_birdLife == 2)
+            {
+                _extrabirds[1].SetActive(false); 
+            }
+            if (_birdLife == 1)
+            {
+                _extrabirds[2].SetActive(false); 
+            }
+            
             _render.color = Color.red;
             AudioSource.PlayClipAtPoint(_holdSFX, Vector3.zero, Single.MaxValue);
             _guideLine.SetActive(true);
@@ -193,7 +204,7 @@ public class Bird : MonoBehaviour
 
 	private void OnBecameInvisible()
 	{
-        if(gameObject.active)
+        if(gameObject.active && _render.color.a != 0)
             StartCoroutine(ResetAfterDelay());
 	}
 }

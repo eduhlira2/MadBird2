@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a0667adb-4477-4e75-bac3-7cd0216acd39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mad Birds/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mad Birds/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GreenBird.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GreenBird.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bird.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +77,8 @@
       <workItem from="1658534349010" duration="1386000" />
       <workItem from="1658666853558" duration="1323000" />
       <workItem from="1658883793348" duration="1123000" />
+      <workItem from="1658887406416" duration="597000" />
+      <workItem from="1658917747134" duration="1529000" />
     </task>
     <servers />
   </component>
