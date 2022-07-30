@@ -30,6 +30,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop\Mad Birds.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\eduar\Desktop" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2020.3.36f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\eduar\Documents\GitHub\MadBird2 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
@@ -75,6 +83,8 @@
       <workItem from="1658434572176" duration="1845000" />
       <workItem from="1658770475017" duration="1840000" />
       <workItem from="1658941100151" duration="472000" />
+      <workItem from="1659152941030" duration="482000" />
+      <workItem from="1659153456560" duration="517000" />
     </task>
     <servers />
   </component>

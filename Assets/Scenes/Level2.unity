@@ -2147,6 +2147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGM Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 8711718542519473293, guid: 60ed316505fff064188a809774eb6044, type: 3}
+      propertyPath: m_Volume
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 8711718542519473294, guid: 60ed316505fff064188a809774eb6044, type: 3}
       propertyPath: m_RootOrder
       value: 22

@@ -26,7 +26,6 @@ public class PointControl : MonoBehaviour
         if (points > PlayerPrefs.GetInt("highScore"))
         {
             PlayerPrefs.SetInt("highScore", points);
-            Debug.Log("O valor de highScore salvo eh: "+ PlayerPrefs.GetInt("highScore"));
         }
     }
 }
